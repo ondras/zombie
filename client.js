@@ -34,4 +34,10 @@ ZombieReporter.prototype.suiteStarted = function() {}
 ZombieReporter.prototype.suiteDone = function() {}
 ZombieReporter.prototype.specStarted = function() {}
 
+ZombieReporter.prototype.reportRunnerResults = ZombieReporter.prototype.jasmineDone;
+ZombieReporter.prototype.reportSpecResults = function(spec) {
+	var s = {status: spec.results().failedCount > 0 ? "failed" : "passed"};
+	return this.specDone(s);
+}
+
 jasmine.getEnv().addReporter(new ZombieReporter());
