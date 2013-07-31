@@ -1,7 +1,7 @@
 Zombie
 ======
 
-A minimalistic jasmine test driver.
+A minimalistic Jasmine test driver.
 
 Prerequisities
 --------------
